@@ -4,19 +4,16 @@ import com.aplana.chameleon.elements.selenium.WebElementFacade;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class TextInput extends WebElementFacade {
+public class ComboBox extends WebElementFacade {
 
-    public TextInput(WebElement element, String elementName, int waitTimeOut, String driverId) {
+    public ComboBox(WebElement element, String elementName, int waitTimeOut, String driverId) {
         super(element, elementName, waitTimeOut, driverId);
     }
 
-    public String getPlaceHolder(){
-        return getWrappedElement().findElement(By.xpath("./../..//div[contains(@data-marker,'Error')]")).getText();
-    }
-
-    public void sendKeys(CharSequence... keysToSend) {
+    public void type(String value){
         getWrappedElement().click();
-        getWrappedElement().sendKeys(keysToSend);
+        WebElement select = getWrappedElement() .findElement(By.xpath(".//*[contains(text(), '" + value + "')]"));
+        select.click();
     }
 
     @Override

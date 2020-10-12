@@ -2,6 +2,7 @@ package com.aplana.chameleonTest.element;
 
 import com.aplana.chameleon.definitions.repository.DefaultElementFacadeMapper;
 import com.aplana.chameleon.definitions.repository.selenium.elements.MetaButton;
+import com.aplana.chameleon.definitions.repository.selenium.elements.MetaComboBox;
 import com.aplana.chameleon.definitions.repository.selenium.elements.MetaTextInput;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
@@ -20,7 +21,8 @@ public class ElementFacadeMapper extends DefaultElementFacadeMapper {
 
 	private static final Class[][] CLASS_PAIRS = {
 			{MetaButton.class, Button.class},
-			{MetaTextInput.class, TextInput.class}
+			{MetaTextInput.class, TextInput.class},
+			{MetaComboBox.class,ComboBox.class}
 
 
 	};
