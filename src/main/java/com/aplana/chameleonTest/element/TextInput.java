@@ -10,7 +10,7 @@ public class TextInput extends WebElementFacade {
         super(element, elementName, waitTimeOut, driverId);
     }
 
-    public String getPlaceHolder(){
+    public String getPlaceholder(){
         return getWrappedElement().findElement(By.xpath("./../..//div[contains(@data-marker,'Error')]")).getText();
     }
 

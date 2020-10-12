@@ -23,7 +23,7 @@
         <Button name="Оставить заявку" locator="//div[@class='b-intro__block-buttons']//a[text()='Оставить заявку']"
                 isLoaded="true"/>
     </Page>
-    <Page name="Заполнение заявки на ипотеку">
+    <Page name="Заполнение заявки на ипотеку" locator="//div[@name='acceptSalary']">
         <StaticText name="Заголовок" locator="//*[text()='Заполнение заявки']"/>
         <TextInput name="Фамилия"/>
         <TextInput name="E-mail"/>
@@ -38,5 +38,7 @@
         <TextInput name="Ежемесячный доход"/>
         <TextInput name="Телефон"/>
         <Button name="Продолжить" locator="//*[text()='Продолжить']"/>
+        <TextInput name="Место рождения"/>
+        <ComboBox name="Могу подтвердить с помощью" locator="//div[@name='acceptSalary']"/>
     </Page>
 </Pages>

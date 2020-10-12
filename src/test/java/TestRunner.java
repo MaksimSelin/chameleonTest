@@ -2,9 +2,7 @@ import com.aplana.chameleon.ChameleonCucumberRunner;
 import cucumber.api.CucumberOptions;
 import org.junit.runner.RunWith;
 
-/**
- * @author Nikolay Streltsov on 02.09.2018
- */
+
 @RunWith(ChameleonCucumberRunner.class)
 @CucumberOptions(
         features = "src/test/resources/features/",
